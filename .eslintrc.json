@@ -1,0 +1,84 @@
+{
+  "plugins": ["babel", "json-format"],
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "prettier",
+    "prettier/babel",
+    "prettier/react"
+  ],
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  },
+  "rules": {
+    "no-unused-expressions": "off",
+    "babel/no-unused-expressions": "error",
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "brace-style": [
+      "error",
+      "stroustrup",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1,
+        "VariableDeclarator": 1,
+        "ObjectExpression": 1,
+        "ignoredNodes": ["TemplateLiteral"]
+      }
+    ],
+    "template-curly-spacing": "off",
+
+    "no-param-reassign": 0,
+    "no-underscore-dangle": 0,
+    "jsx-a11y/mouse-events-have-key-events": 0,
+
+    "react/forbid-prop-types": 0,
+    "react/require-default-props": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/no-array-index-key": 0,
+    "react/destructuring-assignment": 0,
+    "react/prop-types": 0
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.js", "src/setupTests.js"],
+      "env": {
+        "jest": true
+      },
+      "rules": {
+        "react/jsx-filename-extension": "off",
+        "import/no-extraneous-dependencies": "off"
+      }
+    },
+    {
+      "files": [".gitlab/config/**/*.*", ".gitlab/scripts/**/*.*"],
+      "env": {
+        "node": true,
+        "browser": false
+      },
+      "rules": {
+        "import/no-extraneous-dependencies": "off",
+        "global-require": "off",
+        "import/no-dynamic-require": "off",
+        "import/order": "warn",
+        "no-console": ["off"]
+      }
+    }
+  ]
+}
