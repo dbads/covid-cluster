@@ -90,10 +90,12 @@ class HexagonCluster extends Component {
         const newHexagon = { [hexagonToAdd]: borders };
         this.setState((state) => ({ hexagons: { ...state.hexagons, ...newHexagon } }));
         // console.log("-- updated cluster --", this.state.hexagons);
-      } else {
+      }
+      else {
         console.log("--hexagon already added ---");
       }
-    } else {
+    }
+    else {
       console.log("--hexagon details are required ---");
     }
   };
@@ -109,10 +111,12 @@ class HexagonCluster extends Component {
         delete hexagons[hexagonToRemove];
         console.log("newHexagons after removing --", hexagons);
         this.setState({ hexagons });
-      } else {
+      }
+      else {
         console.log("-- hexagon already removed --");
       }
-    } else {
+    }
+    else {
       console.log("--hexagon details are required ---");
     }
   };

@@ -4,4 +4,3 @@
 - Install dependencies `npm i`
 - Start the app `npm start`
 - open `localhost:3000` on localhost to see the app
-
