@@ -136,17 +136,14 @@ class Hexagon extends Component {
         const newHexagonSides = this.getHexSide(center);
         const newHexagon = { [hexagonToAdd]: { center }, ...newHexagonSides };
         this.setState((state) => ({ hexagons: { ...state.hexagons, ...newHexagon } }));
-      }
-      else {
+      } else {
         console.log("Hexagon already added");
       }
-    }
-    else if (center && sides) {
+    } else if (center && sides) {
       // when adding first cluster, added during mounting, initial hexagon
       const newHexagon = { a: { center }, ...sides };
       this.setState((state) => ({ hexagons: { ...state.hexagons, ...newHexagon } }));
-    }
-    else {
+    } else {
       console.log("Details are required");
     }
   };
@@ -159,6 +156,11 @@ class Hexagon extends Component {
     return (
       <div className="cluster">
         <span style={{ color: "green" }}>Hexagon Village</span>
+
+        <a href="https://github.com/dbads/covid-cluster" style={{ float: "right" }}>
+          {" "}
+          GitHub Repo
+        </a>
         <br />
         <br />
         <canvas ref={this.canvasRef} />
