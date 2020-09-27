@@ -155,10 +155,9 @@ class Hexagon extends Component {
   render() {
     return (
       <div className="cluster">
-        <span style={{ color: "green" }}>Hexagon Village</span>
+        <span style={{ color: "green" }}>Hexagon Village(Draft...)</span>
 
         <a href="https://github.com/dbads/covid-cluster" style={{ float: "right" }}>
-          {" "}
           GitHub Repo
         </a>
         <br />
